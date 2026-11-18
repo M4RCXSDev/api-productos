@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ALT + MAYUS + F -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+      crossorigin="anonymous"
+    />
+
+    <!-- Iconos de BOotstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar  -->
+    <!-- fixed-top para barra arriba -->
+    <nav class="navbar md:navbar-expand bg-1">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pagina web</a>
+        <button
+          class="btn-icon navbar-toggler"
+          type="button"
+          data-bs-toggle="drawer"
+          data-bs-target="#navbarDrawer"
+          aria-controls="navbarDrawer"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <dialog
+          class="drawer drawer-end"
+          tabindex="-1"
+          id="navbarDrawer"
+          aria-labelledby="navbarDrawerLabel"
+        >
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="drawer"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="drawer-body mb-2 md:mb-0">
+            <ul class="nav navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  type="button"
+                  data-bs-toggle="menu"
+                  aria-expanded="false"
+                >
+                  Menu
+                </button>
+                <div class="menu">
+                  <a class="menu-item" href="#">Action</a>
+
+                  <a class="menu-item" href="#">Another action</a>
+                  <hr class="menu-divider" />
+                  <a class="menu-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="hstack gap-2" role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn-solid btn-icon theme-secondary" type="submit">
+                <svg class="bi" width="16" height="16">
+                  <use href="#search" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </dialog>
+      </div>
+    </nav>
+    <!-- Fin del Navbar -->
+
+    <div class="container">
+      <!-- Por detras funciona con flexbox -->
+      <!-- row =fila -->
+      <!-- col =  column(columna) -->
+      <div class="row">
+        <div class="md:col-4">
+          <p class="fg-danger">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A delectus
+            nemo deserunt eligendi repudiandae molestiae, sapiente voluptatibus!
+            Excepturi suscipit vero tempore ipsa rem aliquid, ipsum nesciunt
+            tempora? Fugiat, cumque expedita. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Voluptas, magni doloribus debitis quo
+            consectetur animi doloremque, veritatis quae vitae laboriosam
+            ducimus velit numquam exercitationem culpa quasi dicta quis maxime
+            unde. Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+            natus aperiam aliquid magnam totam cum incidunt rerum excepturi
+            error eaque debitis, officiis quam perspiciatis mollitia aliquam
+            beatae? Quisquam, beatae incidunt. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Esse optio vero dignissimos velit, id,
+            earum quia voluptate minima eos veritatis beatae, commodi totam
+            ipsum eius quibusdam fuga repellendus alias quaerat.
+          </p>
+        </div>
+        <div class="md:col-4">
+          <p class="fg-primary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            corporis! Sint rerum quod repellat laboriosam, ad veritatis
+            voluptate impedit adipisci, distinctio et nostrum veniam neque
+            voluptas dolor recusandae nulla autem? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. At perferendis nulla totam reiciendis,
+            saepe reprehenderit nesciunt quo dolorum eligendi voluptate veniam
+            eum tempora hic nemo neque, ipsum, nobis fuga amet. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Optio sint nulla, quos
+            quisquam voluptas, tempora magnam neque consequatur tempore rem
+            deserunt unde, delectus ex autem nisi sapiente aliquid enim sed.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
+            eveniet alias aliquam provident. Modi ipsam officiis voluptates
+            aliquid quia beatae ab expedita, iste veniam tempora cum dolores?
+            Placeat, cumque et?
+          </p>
+        </div>
+        <div class="md:col-4">
+          <p class="fg-success">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            architecto quos minima a officia odio fuga id temporibus? Vitae
+            error voluptates qui aliquam a iure itaque culpa ab aspernatur
+            adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique, necessitatibus ipsum officia suscipit quod molestias
+            mollitia magnam dicta harum odit eligendi cum recusandae illum
+            adipisci nemo perspiciatis repellendus eaque deserunt. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Vel architecto laborum
+            inventore distinctio natus, aspernatur odit. Unde provident dolorum,
+            omnis est illo dicta cupiditate eveniet, quis vitae officiis nam
+            nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veritatis officiis laborum itaque sunt accusamus repellendus sequi,
+            maiores qui ea quam reprehenderit facere, consectetur consequatur
+            error. Tempore error perspiciatis atque asperiores? Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Sit eum quis quia!
+            Veniam placeat minima suscipit eaque provident perspiciatis
+            aspernatur odio! Saepe adipisci aliquid, illum dolorem facere est
+            sit qui? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Quod molestiae distinctio quasi consectetur quidem possimus
+            repellendus nemo nam iusto sint recusandae repellat, quae itaque
+            illum cumque soluta quibusdam excepturi debitis!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="md:col-8">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint,
+            assumenda, libero, debitis minus autem est eaque accusamus rem
+            excepturi necessitatibus provident earum odio eveniet repellat quas
+            ut ea illo laborum?Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Unde quos quod nihil! Eum pariatur libero nam
+            consequatur dolorum, adipisci magnam non aperiam aut cumque earum!
+            Et quisquam omnis delectus rerum?Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quaerat, qui non ratione enim dolorem,
+            ducimus doloremque dignissimos temporibus eius nam distinctio, quos
+            impedit dolore voluptate repudiandae numquam magni? Numquam,
+            voluptas.
+          </p>
+        </div>
+
+        <div class="md:col-4">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            error officia qui. Dignissimos ipsam unde, at, tenetur eius
+            similique quasi a minima hic saepe tempore, perspiciatis perferendis
+            vel libero sit. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ea eligendi debitis voluptas unde quisquam eius numquam rerum
+            illo, obcaecati quia ratione explicabo dolores officiis culpa dicta
+            aspernatur at perferendis repellat!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tamaño</th>
+                <th>Desarollador</th>
+                <th>Version</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- EMMET HTML -->
+              <!-- {} contenido -->
+              <!-- * repeticiones -->
+              <!-- $ incremental -->
+              <!--  (tr>(td{$}+td{Nombre de software}+td{100
+              mb}+td{Microsoft}+td{2.0}))*10 -->
+             
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tamaño</th>
+                <th>Desarollador</th>
+                <th>Version</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
