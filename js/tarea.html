@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de productos</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar bg-1 fg-2">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-box-seam"></i>
+        Gestion de Productos
+      </a>
+
+      <div class="d-flex">
+        <a class="nav-link me-3" href="#">
+          <i class="bi bi-house"></i>
+          Inicio
+        </a>
+
+        <a class="nav-link" href="#">
+          <i class="bi bi-box"></i>
+          Productos
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+      <h2>Lista de productos</h2>
+
+      <!-- Boton para abrir el Dialog -->
+      <button
+        type="button"
+        class="btn-solid theme-primary"
+        data-bs-toggle="dialog"
+        data-bs-target="#dialogProducto"
+      >
+        <i class="bi bi-plus-circle"></i>
+        Nuevo producto
+      </button>
+
+    </div>
+
+    <!-- Tabla de productos -->
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Clientes</th>
+            <th scope="col">Proveedores</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Cocacola</td>
+            <td>500 ML</td>
+            <td>Marcos</td>
+            <td>COCOLACOMPY</td>
+            <td>
+              <button type="button" class="btn-solid theme-warning">
+                <i class="bi bi-pencil-square"></i>
+                Editar
+              </button>
+
+              <button type="button" class="btn-solid theme-danger">
+                <i class="bi bi-trash"></i>
+                Eliminar
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Huevo</td>
+            <td>2KG</td>
+            <td>Joaho</td>
+            <td>CALERA</td>
+            <td>
+              <button type="button" class="btn-solid theme-warning">
+                <i class="bi bi-pencil-square"></i>
+                Editar
+              </button>
+
+              <button type="button" class="btn-solid theme-danger">
+                <i class="bi bi-trash"></i>
+                Eliminar
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Frugo</td>
+            <td>1LT</td>
+            <td>Carlos</td>
+            <td>DEL VALLE</td>
+            <td>
+              <button type="button" class="btn-solid theme-warning">
+                <i class="bi bi-pencil-square"></i>
+                Editar
+              </button>
+
+              <button type="button" class="btn-solid theme-danger">
+                <i class="bi bi-trash"></i>
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Dialog para registrar productos -->
+  <dialog class="dialog" id="dialogProducto" aria-labelledby="tituloDialog">
+
+    <!-- Encabezado -->
+    <div class="dialog-header">
+      <h2 class="dialog-title" id="tituloDialog">
+        Registrar producto
+      </h2>
+
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="dialog"
+        aria-label="Cerrar"
+      ></button>
+    </div>
+
+    <!-- Formulario -->
+    <div class="dialog-body">
+
+      <form id="formProducto">
+
+        <div class="mb-3">
+          <label for="producto" class="form-label">
+            Producto
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="producto"
+            placeholder="Ingrese el producto"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="cantidad" class="form-label">
+            Cantidad
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="cantidad"
+            placeholder="Ejemplo: 500 ML"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="cliente" class="form-label">
+            Cliente
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="cliente"
+            placeholder="Ingrese el cliente"
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="proveedor" class="form-label">
+            Proveedor
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="proveedor"
+            placeholder="Ingrese el proveedor"
+          >
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- Botones del Dialog -->
+    <div class="dialog-footer">
+
+      <button
+        type="button"
+        class="btn-solid theme-secondary"
+        data-bs-dismiss="dialog"
+      >
+        Cancelar
+      </button>
+
+      <button type="button" class="btn-solid theme-primary">
+        <i class="bi bi-floppy"></i>
+        Guardar
+      </button>
+
+    </div>
+
+  </dialog>
+
+  <!-- Bootstrap JS -->
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"
+  ></script>
+
+</body>
+</html>
